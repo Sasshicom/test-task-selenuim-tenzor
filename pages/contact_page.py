@@ -3,6 +3,8 @@ from selenium.webdriver.common.by import By
 
 
 banner_selector = (By.CLASS_NAME, "sbisru-Contacts__logo-tensor")
+region_span_selector = (By.CLASS_NAME, 'sbis_ru-Region-Chooser__text')
+kamchatka_region_selector = (By.XPATH, "//*[@title='Камчатский край']")
 
 
 class ContactPage(BasePage):
@@ -20,3 +22,15 @@ class ContactPage(BasePage):
 
     def compare_height(self, obj):
         return all(x == obj[0] for x in obj)
+
+    def get_region(self):
+        return self.find_element(region_span_selector).get_attribute("textContent")
+
+    def click_region_span(self):
+        self.find_element(region_span_selector).click()
+
+    def select_new_region(self):
+        self.find_element(kamchatka_region_selector).click()
+
+    def partner_list(self):
+        return self.browser.find_element(By.CLASS_NAME, 'sbisru-Contacts-List__name').get_attribute("title")
