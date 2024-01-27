@@ -34,6 +34,8 @@ def test_check_img_size(browser):
     # todo изменить метод нажатия на кнопку, пока тут такой костылик из за областей видимости
     browser.execute_script("arguments[0].click();", more_button)
     browser.implicitly_wait(5)
+    about_tab_url = browser.current_url
+    assert about_tab_url == ("https://tensor.ru/about")
     photo_grid = browser.find_elements(By.CLASS_NAME, "tensor_ru-About__block3-image")
     obj_img_width = []
     obj_img_height = []
