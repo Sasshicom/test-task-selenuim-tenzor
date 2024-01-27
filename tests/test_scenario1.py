@@ -7,7 +7,6 @@ from pages.base_page import BasePage
 
 
 def test_block_human_power_exist(browser):
-    browser.maximize_window()
     sbis_page = SbisPage(browser)
     contact_page = ContactPage(browser)
     sbis_page.open()
@@ -22,7 +21,6 @@ def test_block_human_power_exist(browser):
 
 
 def test_check_img_size(browser):
-    browser.maximize_window()
     base_page = BasePage(browser)
     sbis_page = SbisPage(browser)
     contact_page = ContactPage(browser)

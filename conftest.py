@@ -6,4 +6,5 @@ import pytest
 def browser():
     browser = webdriver.Chrome()
     browser.implicitly_wait(2)
+    browser.maximize_window()
     return browser
