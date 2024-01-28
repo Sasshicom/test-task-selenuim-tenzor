@@ -24,3 +24,5 @@ def test_scenario3(browser):
     time.sleep(2)
     web_installer.click()
     time.sleep(3)
+
+    #todo поправить проблему с загрузкой непроверенного файла
