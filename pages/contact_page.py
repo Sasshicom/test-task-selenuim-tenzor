@@ -17,12 +17,6 @@ class ContactPage(BasePage):
     def click_banner(self):
         self.find_banner().click()
 
-    def compare_width(self, obj):
-        return all(x == obj[0] for x in obj)
-
-    def compare_height(self, obj):
-        return all(x == obj[0] for x in obj)
-
     def get_region(self):
         return self.find_element(region_span_selector).get_attribute("textContent")
 
