@@ -34,6 +34,7 @@ def test_check_img_size(browser):
 
     sbis_page.open()
     sbis_page.click_contact_btn()
+    time.sleep(1)
     contact_page.click_banner()
     base_page.switch_window(1)
     # todo изменить метод нажатия на кнопку, пока тут такой костылик из за областей видимости, не могу победить скролл
