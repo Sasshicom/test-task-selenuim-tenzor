@@ -22,6 +22,6 @@ def test_download_plugin_and_check_size(browser):
     web_installer_btn.click()
     time.sleep(15)
     current_dir = os.getcwd()
-    file_size = os.path.getsize(current_dir + '\sbisplugin-setup-web.exe')
+    file_size = os.path.getsize(current_dir + r'\sbisplugin-setup-web.exe')
     file_size_mb = float(str(file_size / 1048576)[0:4])
     assert file_size_mb == 7.02
